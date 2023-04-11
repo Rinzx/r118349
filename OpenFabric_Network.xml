@@ -1,0 +1,1701 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<scenario name="/home/rinzx/Documents/configs_core/N9-leaf-spine.xml">
+  <networks>
+    <network id="1" name="sw0" type="HUB">
+      <position x="336" y="266" lat="47.57674879471599" lon="-122.12779449096804" alt="2.0"/>
+    </network>
+    <network id="2" name="sw1" type="HUB">
+      <position x="915" y="105" lat="47.57821227704232" lon="-122.11999262272546" alt="2.0"/>
+    </network>
+    <network id="3" name="sw2" type="HUB">
+      <position x="912" y="242" lat="47.57696695616644" lon="-122.12003304691325" alt="2.0"/>
+    </network>
+    <network id="4" name="sw3" type="HUB">
+      <position x="914" y="383" lat="47.57568524462824" lon="-122.12000609745472" alt="2.0"/>
+    </network>
+    <network id="5" name="sw4" type="HUB">
+      <position x="917" y="529" lat="47.57435804926386" lon="-122.11996567326695" alt="2.0"/>
+    </network>
+  </networks>
+  <devices>
+    <device id="6" name="r8" type="router" class="" image="">
+      <position x="770" y="146" lat="47.57783959287854" lon="-122.12194645846843" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="7" name="r9" type="router" class="" image="">
+      <position x="770" y="245" lat="47.57693968603484" lon="-122.12194645846843" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="8" name="r10" type="router" class="" image="">
+      <position x="769" y="335" lat="47.57612157548266" lon="-122.12195993319769" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="9" name="r11" type="router" class="" image="">
+      <position x="771" y="438" lat="47.57518527772095" lon="-122.12193298373917" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="10" name="r5" type="router" class="" image="">
+      <position x="676" y="195" lat="47.577394186373894" lon="-122.12321308301904" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="11" name="r6" type="router" class="" image="">
+      <position x="673" y="291" lat="47.576521542238524" lon="-122.12325350720683" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="12" name="r7" type="router" class="" image="">
+      <position x="672" y="389" lat="47.575630703015776" lon="-122.12326698193608" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="13" name="r3" type="router" class="" image="">
+      <position x="563" y="292" lat="47.576512452118905" lon="-122.12473572742562" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="14" name="r2" type="router" class="" image="">
+      <position x="562" y="198" lat="47.577366916464804" lon="-122.12474920215487" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="15" name="r4" type="router" class="" image="">
+      <position x="556" y="388" lat="47.575639793288474" lon="-122.12483005053043" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="16" name="r1" type="router" class="" image="">
+      <position x="453" y="221" lat="47.577157846689936" lon="-122.12621794764439" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+    <device id="17" name="n1" type="PC" class="" image="">
+      <position x="231" y="266" lat="47.57674879471599" lon="-122.12920933754053" alt="2.0"/>
+      <services>
+        <service name="atd"/>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="18" name="s1" type="host" class="" image="">
+      <position x="1027" y="105" lat="47.57821227704232" lon="-122.11848345304816" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="FTP"/>
+        <service name="HTTP"/>
+        <service name="SSH"/>
+      </services>
+    </device>
+    <device id="19" name="s2" type="host" class="" image="">
+      <position x="1026" y="242" lat="47.57696695616644" lon="-122.11849692777741" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="FTP"/>
+        <service name="HTTP"/>
+        <service name="SSH"/>
+      </services>
+    </device>
+    <device id="20" name="s3" type="host" class="" image="">
+      <position x="1031" y="383" lat="47.57568524462824" lon="-122.11842955413108" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="FTP"/>
+        <service name="HTTP"/>
+        <service name="SSH"/>
+      </services>
+    </device>
+    <device id="21" name="s4" type="host" class="" image="">
+      <position x="1033" y="529" lat="47.57435804926386" lon="-122.11840260467255" alt="2.0"/>
+      <services>
+        <service name="DefaultRoute"/>
+        <service name="FTP"/>
+        <service name="HTTP"/>
+        <service name="SSH"/>
+      </services>
+    </device>
+    <device id="22" name="n2" type="PC" class="" image="">
+      <position x="336" y="358" lat="47.57591250073528" lon="-122.12779449096804" alt="2.0"/>
+      <services>
+        <service name="atd"/>
+        <service name="DefaultRoute"/>
+      </services>
+    </device>
+    <device id="23" name="r0" type="router" class="" image="">
+      <position x="452" y="318" lat="47.57627610845505" lon="-122.12623142237366" alt="2.0"/>
+      <services>
+        <service name="FRROpenFabric"/>
+        <service name="FRRzebra"/>
+        <service name="IPForward"/>
+      </services>
+    </device>
+  </devices>
+  <links>
+    <link node1="1" node2="16">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:76" ip4="10.0.22.1" ip4_mask="24" ip6="2001:22::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="1" node2="17">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:77" ip4="10.0.22.20" ip4_mask="24" ip6="2001:22::20" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="1" node2="22">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:7c" ip4="10.0.22.21" ip4_mask="24" ip6="2001:22::21" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="1" node2="23">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:83" ip4="10.0.22.2" ip4_mask="24" ip6="2001:22::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="2" node2="6">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:42" ip4="10.0.0.1" ip4_mask="24" ip6="2001::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="2" node2="7">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:46" ip4="10.0.0.2" ip4_mask="24" ip6="2001::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="2" node2="8">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:4a" ip4="10.0.0.3" ip4_mask="24" ip6="2001::3" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="2" node2="9">
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:50" ip4="10.0.0.4" ip4_mask="24" ip6="2001::4" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="2" node2="18">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:78" ip4="10.0.0.10" ip4_mask="24" ip6="2001::10" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="3" node2="6">
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:43" ip4="10.0.1.1" ip4_mask="24" ip6="2001:1::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="3" node2="7">
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:47" ip4="10.0.1.2" ip4_mask="24" ip6="2001:1::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="3" node2="8">
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:4b" ip4="10.0.1.3" ip4_mask="24" ip6="2001:1::3" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="3" node2="9">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:51" ip4="10.0.1.4" ip4_mask="24" ip6="2001:1::4" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="3" node2="19">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:79" ip4="10.0.1.10" ip4_mask="24" ip6="2001:1::10" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="4" node2="6">
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:44" ip4="10.0.2.1" ip4_mask="24" ip6="2001:2::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="4" node2="7">
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:48" ip4="10.0.2.2" ip4_mask="24" ip6="2001:2::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="4" node2="8">
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:4c" ip4="10.0.2.3" ip4_mask="24" ip6="2001:2::3" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="4" node2="9">
+      <iface2 id="1" name="eth1" mac="00:00:00:aa:00:4f" ip4="10.0.2.4" ip4_mask="24" ip6="2001:2::4" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="4" node2="20">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:7a" ip4="10.0.2.10" ip4_mask="24" ip6="2001:2::10" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="5" node2="6">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:45" ip4="10.0.3.1" ip4_mask="24" ip6="2001:3::1" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="5" node2="7">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:49" ip4="10.0.3.2" ip4_mask="24" ip6="2001:3::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="5" node2="8">
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:4d" ip4="10.0.3.3" ip4_mask="24" ip6="2001:3::3" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="5" node2="9">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:4e" ip4="10.0.3.4" ip4_mask="24" ip6="2001:3::4" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="5" node2="21">
+      <iface2 id="0" name="eth0" mac="00:00:00:aa:00:7b" ip4="10.0.3.10" ip4_mask="24" ip6="2001:3::10" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="12" node2="8">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:52" ip4="10.0.4.1" ip4_mask="24" ip6="2001:4::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:53" ip4="10.0.4.2" ip4_mask="24" ip6="2001:4::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="12" node2="9">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:54" ip4="10.0.5.1" ip4_mask="24" ip6="2001:5::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:55" ip4="10.0.5.2" ip4_mask="24" ip6="2001:5::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="11" node2="7">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:56" ip4="10.0.6.1" ip4_mask="24" ip6="2001:6::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:57" ip4="10.0.6.2" ip4_mask="24" ip6="2001:6::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="11" node2="8">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:58" ip4="10.0.7.1" ip4_mask="24" ip6="2001:7::1" ip6_mask="64"/>
+      <iface2 id="5" name="eth5" mac="00:00:00:aa:00:59" ip4="10.0.7.2" ip4_mask="24" ip6="2001:7::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="10" node2="6">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:5a" ip4="10.0.8.1" ip4_mask="24" ip6="2001:8::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:5b" ip4="10.0.8.2" ip4_mask="24" ip6="2001:8::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="10" node2="7">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:5c" ip4="10.0.9.1" ip4_mask="24" ip6="2001:9::1" ip6_mask="64"/>
+      <iface2 id="5" name="eth5" mac="00:00:00:aa:00:5d" ip4="10.0.9.2" ip4_mask="24" ip6="2001:9::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="10" node2="8">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:5e" ip4="10.0.10.1" ip4_mask="24" ip6="2001:10::1" ip6_mask="64"/>
+      <iface2 id="6" name="eth6" mac="00:00:00:aa:00:5f" ip4="10.0.10.2" ip4_mask="24" ip6="2001:10::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="11" node2="6">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:60" ip4="10.0.11.1" ip4_mask="24" ip6="2001:11::1" ip6_mask="64"/>
+      <iface2 id="5" name="eth5" mac="00:00:00:aa:00:61" ip4="10.0.11.2" ip4_mask="24" ip6="2001:11::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="12" node2="7">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:62" ip4="10.0.12.1" ip4_mask="24" ip6="2001:12::1" ip6_mask="64"/>
+      <iface2 id="6" name="eth6" mac="00:00:00:aa:00:63" ip4="10.0.12.2" ip4_mask="24" ip6="2001:12::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="15" node2="11">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:64" ip4="10.0.13.1" ip4_mask="24" ip6="2001:13::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:65" ip4="10.0.13.2" ip4_mask="24" ip6="2001:13::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="15" node2="10">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:66" ip4="10.0.14.1" ip4_mask="24" ip6="2001:14::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:67" ip4="10.0.14.2" ip4_mask="24" ip6="2001:14::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="14" node2="12">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:68" ip4="10.0.15.1" ip4_mask="24" ip6="2001:15::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:69" ip4="10.0.15.2" ip4_mask="24" ip6="2001:15::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="14" node2="11">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:6a" ip4="10.0.16.1" ip4_mask="24" ip6="2001:16::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:6b" ip4="10.0.16.2" ip4_mask="24" ip6="2001:16::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="13" node2="10">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:6c" ip4="10.0.17.1" ip4_mask="24" ip6="2001:17::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:6d" ip4="10.0.17.2" ip4_mask="24" ip6="2001:17::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="13" node2="12">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:6e" ip4="10.0.18.1" ip4_mask="24" ip6="2001:18::1" ip6_mask="64"/>
+      <iface2 id="4" name="eth4" mac="00:00:00:aa:00:6f" ip4="10.0.18.2" ip4_mask="24" ip6="2001:18::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="16" node2="14">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:70" ip4="10.0.19.1" ip4_mask="24" ip6="2001:19::1" ip6_mask="64"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:71" ip4="10.0.19.2" ip4_mask="24" ip6="2001:19::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="16" node2="13">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:72" ip4="10.0.20.1" ip4_mask="24" ip6="2001:20::1" ip6_mask="64"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:73" ip4="10.0.20.2" ip4_mask="24" ip6="2001:20::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="16" node2="15">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:74" ip4="10.0.21.1" ip4_mask="24" ip6="2001:21::1" ip6_mask="64"/>
+      <iface2 id="2" name="eth2" mac="00:00:00:aa:00:75" ip4="10.0.21.2" ip4_mask="24" ip6="2001:21::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="23" node2="14">
+      <iface1 id="0" name="eth0" mac="00:00:00:aa:00:7d" ip4="10.0.23.1" ip4_mask="24" ip6="2001:23::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:7e" ip4="10.0.23.2" ip4_mask="24" ip6="2001:23::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="23" node2="13">
+      <iface1 id="1" name="eth1" mac="00:00:00:aa:00:7f" ip4="10.0.24.1" ip4_mask="24" ip6="2001:24::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:80" ip4="10.0.24.2" ip4_mask="24" ip6="2001:24::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+    <link node1="23" node2="15">
+      <iface1 id="2" name="eth2" mac="00:00:00:aa:00:81" ip4="10.0.25.1" ip4_mask="24" ip6="2001:25::1" ip6_mask="64"/>
+      <iface2 id="3" name="eth3" mac="00:00:00:aa:00:82" ip4="10.0.25.2" ip4_mask="24" ip6="2001:25::2" ip6_mask="64"/>
+      <options delay="0" bandwidth="0" loss="0.0" dup="0" jitter="0" unidirectional="0"/>
+    </link>
+  </links>
+  <service_configurations>
+    <service name="FRRzebra" node="6">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.0.1/24
+  ipv6 address 2001::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.1.1/24
+  ipv6 address 2001:1::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.2.1/24
+  ipv6 address 2001:2::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.3.1/24
+  ipv6 address 2001:3::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.8.2/24
+  ipv6 address 2001:8::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth5
+  ip address 10.0.11.2/24
+  ipv6 address 2001:11::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0008.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="7">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.0.2/24
+  ipv6 address 2001::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.1.2/24
+  ipv6 address 2001:1::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.2.2/24
+  ipv6 address 2001:2::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.3.2/24
+  ipv6 address 2001:3::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.6.2/24
+  ipv6 address 2001:6::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth5
+  ip address 10.0.9.2/24
+  ipv6 address 2001:9::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth6
+  ip address 10.0.12.2/24
+  ipv6 address 2001:12::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0009.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="8">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.0.3/24
+  ipv6 address 2001::3/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.1.3/24
+  ipv6 address 2001:1::3/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.2.3/24
+  ipv6 address 2001:2::3/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.3.3/24
+  ipv6 address 2001:3::3/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.4.2/24
+  ipv6 address 2001:4::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth5
+  ip address 10.0.7.2/24
+  ipv6 address 2001:7::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth6
+  ip address 10.0.10.2/24
+  ipv6 address 2001:10::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0010.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="9">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.3.4/24
+  ipv6 address 2001:3::4/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.2.4/24
+  ipv6 address 2001:2::4/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.0.4/24
+  ipv6 address 2001::4/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.1.4/24
+  ipv6 address 2001:1::4/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.5.2/24
+  ipv6 address 2001:5::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0011.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="10">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.8.1/24
+  ipv6 address 2001:8::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.9.1/24
+  ipv6 address 2001:9::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.10.1/24
+  ipv6 address 2001:10::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.14.2/24
+  ipv6 address 2001:14::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.17.2/24
+  ipv6 address 2001:17::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0005.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="11">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.6.1/24
+  ipv6 address 2001:6::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.7.1/24
+  ipv6 address 2001:7::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.11.1/24
+  ipv6 address 2001:11::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.13.2/24
+  ipv6 address 2001:13::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.16.2/24
+  ipv6 address 2001:16::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0006.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="12">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.4.1/24
+  ipv6 address 2001:4::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.5.1/24
+  ipv6 address 2001:5::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.12.1/24
+  ipv6 address 2001:12::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.15.2/24
+  ipv6 address 2001:15::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth4
+  ip address 10.0.18.2/24
+  ipv6 address 2001:18::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0007.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="13">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.17.1/24
+  ipv6 address 2001:17::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.18.1/24
+  ipv6 address 2001:18::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.20.2/24
+  ipv6 address 2001:20::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.24.2/24
+  ipv6 address 2001:24::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0003.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="14">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.15.1/24
+  ipv6 address 2001:15::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.16.1/24
+  ipv6 address 2001:16::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.19.2/24
+  ipv6 address 2001:19::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.23.2/24
+  ipv6 address 2001:23::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0002.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="15">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.13.1/24
+  ipv6 address 2001:13::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.14.1/24
+  ipv6 address 2001:14::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.21.2/24
+  ipv6 address 2001:21::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.25.2/24
+  ipv6 address 2001:25::2/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0004.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="FRRzebra" node="16">
+      <directories>
+        <directory>/usr/local/etc/frr</directory>
+        <directory>/var/run/frr</directory>
+        <directory>/var/log/frr</directory>
+      </directories>
+      <startups>
+        <startup>bash frrboot.sh zebra</startup>
+      </startups>
+      <validates>
+        <validate>pidof zebra</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall zebra</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/usr/local/etc/frr/frr.conf"><![CDATA[interface eth0
+  ip address 10.0.19.1/24
+  ipv6 address 2001:19::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth1
+  ip address 10.0.20.1/24
+  ipv6 address 2001:20::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth2
+  ip address 10.0.21.1/24
+  ipv6 address 2001:21::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+interface eth3
+  ip address 10.0.22.1/24
+  ipv6 address 2001:22::1/64
+  ip router openfabric 1
+  ipv6 router openfabric 1
+!
+router openfabric 1
+  net 47.0000.0000.0000.0001.00
+!
+]]></file>
+      </files>
+    </service>
+    <service name="atd" node="17">
+      <directories>
+        <directory>/var/spool/cron/atjobs</directory>
+        <directory>/var/spool/cron/atspool</directory>
+      </directories>
+      <startups>
+        <startup>bash startatd.sh</startup>
+      </startups>
+      <shutdowns>
+        <shutdown>pkill atd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="startatd.sh"><![CDATA[#!/bin/bash
+
+while true; do
+    curl -o /tmp/test-$(date +%s).txt 10.0.0.10/example.txt
+    curl -o /tmp/test-$(date +%s).txt 10.0.2.10/example.txt
+    sleep 5
+done
+
+]]></file>
+      </files>
+    </service>
+    <service name="HTTP" node="18">
+      <directories>
+        <directory>/etc/apache2</directory>
+        <directory>/var/run/apache2</directory>
+        <directory>/var/log/apache2</directory>
+        <directory>/var/lock/apache2</directory>
+        <directory>/var/www</directory>
+        <directory>/run/lock</directory>
+      </directories>
+      <startups>
+        <startup>chown www-data /var/lock/apache2</startup>
+        <startup>apache2ctl start</startup>
+      </startups>
+      <validates>
+        <validate>pidof apache2</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>apache2ctl stop</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/etc/apache2/apache2.conf"><![CDATA[# apache2.conf generated by utility.py:HttpService
+Mutex file:${APACHE_LOCK_DIR} default
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+
+<IfModule mpm_prefork_module>
+    StartServers          5
+    MinSpareServers       5
+    MaxSpareServers      10
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_worker_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_event_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+
+AccessFileName .htaccess
+
+<Files ~ "^\.ht">
+    Require all denied
+</Files>
+
+DefaultType None
+
+HostnameLookups Off
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+
+#Include mods-enabled/*.load
+#Include mods-enabled/*.conf
+LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+
+NameVirtualHost *:80
+Listen 80
+
+<IfModule mod_ssl.c>
+    Listen 443
+</IfModule>
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+
+ServerTokens OS
+ServerSignature On
+TraceEnable Off
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+		Require all granted
+    </Directory>
+    <Directory /var/www/uploads>
+    	Options +Indexes
+    	AllowOverride None
+    	Require all granted
+    	<LimitExcept GET POST PUT>
+        		Require all granted
+    	</LimitExcept>
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+]]></file>
+      </files>
+    </service>
+    <service name="FTP" node="18">
+      <directories>
+        <directory>/var/run/vsftpd/empty</directory>
+        <directory>/var/ftp</directory>
+      </directories>
+      <startups>
+        <startup>vsftpd ./vsftpd.conf</startup>
+      </startups>
+      <validates>
+        <validate>pidof vsftpd</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall vsftpd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="vsftpd.conf"><![CDATA[# vsftpd.conf auto-generated by FTP service (utility.py)
+listen=YES
+anonymous_enable=YES
+local_enable=YES
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/vsftpd.log
+ftpd_banner=Welcome to the CORE FTP service
+secure_chroot_dir=/var/run/vsftpd/empty
+anon_root=/var/ftp]]></file>
+      </files>
+    </service>
+    <service name="FTP" node="19">
+      <directories>
+        <directory>/var/run/vsftpd/empty</directory>
+        <directory>/var/ftp</directory>
+      </directories>
+      <startups>
+        <startup>vsftpd ./vsftpd.conf</startup>
+      </startups>
+      <validates>
+        <validate>pidof vsftpd</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall vsftpd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="vsftpd.conf"><![CDATA[
+# vsftpd.conf auto-generated by FTP service (utility.py)
+listen=YES
+anonymous_enable=YES
+local_enable=YES
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/vsftpd.log
+ftpd_banner=Welcome to the CORE FTP service
+secure_chroot_dir=/var/run/vsftpd/empty
+anon_root=/var/ftp
+]]></file>
+      </files>
+    </service>
+    <service name="HTTP" node="19">
+      <directories>
+        <directory>/etc/apache2</directory>
+        <directory>/var/run/apache2</directory>
+        <directory>/var/log/apache2</directory>
+        <directory>/var/lock/apache2</directory>
+        <directory>/var/www</directory>
+        <directory>/run/lock</directory>
+      </directories>
+      <startups>
+        <startup>chown www-data /var/lock/apache2</startup>
+        <startup>apache2ctl start</startup>
+      </startups>
+      <validates>
+        <validate>pidof apache2</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>apache2ctl stop</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/etc/apache2/apache2.conf"><![CDATA[# apache2.conf generated by utility.py:HttpService
+Mutex file:${APACHE_LOCK_DIR} default
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+
+<IfModule mpm_prefork_module>
+    StartServers          5
+    MinSpareServers       5
+    MaxSpareServers      10
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_worker_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_event_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+
+AccessFileName .htaccess
+
+<Files ~ "^\.ht">
+    Require all denied
+</Files>
+
+DefaultType None
+
+HostnameLookups Off
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+
+#Include mods-enabled/*.load
+#Include mods-enabled/*.conf
+LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+
+NameVirtualHost *:80
+Listen 80
+
+<IfModule mod_ssl.c>
+    Listen 443
+</IfModule>
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+
+ServerTokens OS
+ServerSignature On
+TraceEnable Off
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+		Require all granted
+    </Directory>
+    <Directory /var/www/uploads>
+    	Options +Indexes
+    	AllowOverride None
+    	Require all granted
+    	<LimitExcept GET POST PUT>
+        		Require all granted
+    	</LimitExcept>
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+]]></file>
+      </files>
+    </service>
+    <service name="HTTP" node="20">
+      <directories>
+        <directory>/etc/apache2</directory>
+        <directory>/var/run/apache2</directory>
+        <directory>/var/log/apache2</directory>
+        <directory>/var/lock/apache2</directory>
+        <directory>/var/www</directory>
+        <directory>/run/lock</directory>
+      </directories>
+      <startups>
+        <startup>chown www-data /var/lock/apache2</startup>
+        <startup>apache2ctl start</startup>
+      </startups>
+      <validates>
+        <validate>pidof apache2</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>apache2ctl stop</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/etc/apache2/apache2.conf"><![CDATA[# apache2.conf generated by utility.py:HttpService
+Mutex file:${APACHE_LOCK_DIR} default
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+
+<IfModule mpm_prefork_module>
+    StartServers          5
+    MinSpareServers       5
+    MaxSpareServers      10
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_worker_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_event_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+
+AccessFileName .htaccess
+
+<Files ~ "^\.ht">
+    Require all denied
+</Files>
+
+DefaultType None
+
+HostnameLookups Off
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+
+#Include mods-enabled/*.load
+#Include mods-enabled/*.conf
+LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+
+NameVirtualHost *:80
+Listen 80
+
+<IfModule mod_ssl.c>
+    Listen 443
+</IfModule>
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+
+ServerTokens OS
+ServerSignature On
+TraceEnable Off
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+		Require all granted
+    </Directory>
+    <Directory /var/www/uploads>
+    	Options +Indexes
+    	AllowOverride None
+    	Require all granted
+    	<LimitExcept GET POST PUT>
+        		Require all granted
+    	</LimitExcept>
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+]]></file>
+      </files>
+    </service>
+    <service name="FTP" node="20">
+      <directories>
+        <directory>/var/run/vsftpd/empty</directory>
+        <directory>/var/ftp</directory>
+      </directories>
+      <startups>
+        <startup>vsftpd ./vsftpd.conf</startup>
+      </startups>
+      <validates>
+        <validate>pidof vsftpd</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall vsftpd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="vsftpd.conf"><![CDATA[
+# vsftpd.conf auto-generated by FTP service (utility.py)
+listen=YES
+anonymous_enable=YES
+local_enable=YES
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/vsftpd.log
+ftpd_banner=Welcome to the CORE FTP service
+secure_chroot_dir=/var/run/vsftpd/empty
+anon_root=/var/ftp
+]]></file>
+      </files>
+    </service>
+    <service name="FTP" node="21">
+      <directories>
+        <directory>/var/run/vsftpd/empty</directory>
+        <directory>/var/ftp</directory>
+      </directories>
+      <startups>
+        <startup>vsftpd ./vsftpd.conf</startup>
+      </startups>
+      <validates>
+        <validate>pidof vsftpd</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>killall vsftpd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="vsftpd.conf"><![CDATA[
+# vsftpd.conf auto-generated by FTP service (utility.py)
+listen=YES
+anonymous_enable=YES
+local_enable=YES
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+write_enable=YES
+anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/vsftpd.log
+ftpd_banner=Welcome to the CORE FTP service
+secure_chroot_dir=/var/run/vsftpd/empty
+anon_root=/var/ftp
+]]></file>
+      </files>
+    </service>
+    <service name="HTTP" node="21">
+      <directories>
+        <directory>/etc/apache2</directory>
+        <directory>/var/run/apache2</directory>
+        <directory>/var/log/apache2</directory>
+        <directory>/var/lock/apache2</directory>
+        <directory>/var/www</directory>
+        <directory>/run/lock</directory>
+      </directories>
+      <startups>
+        <startup>chown www-data /var/lock/apache2</startup>
+        <startup>apache2ctl start</startup>
+      </startups>
+      <validates>
+        <validate>pidof apache2</validate>
+      </validates>
+      <shutdowns>
+        <shutdown>apache2ctl stop</shutdown>
+      </shutdowns>
+      <files>
+        <file name="/etc/apache2/apache2.conf"><![CDATA[# apache2.conf generated by utility.py:HttpService
+Mutex file:${APACHE_LOCK_DIR} default
+PidFile ${APACHE_PID_FILE}
+Timeout 300
+KeepAlive On
+MaxKeepAliveRequests 100
+KeepAliveTimeout 5
+LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+
+<IfModule mpm_prefork_module>
+    StartServers          5
+    MinSpareServers       5
+    MaxSpareServers      10
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_worker_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+<IfModule mpm_event_module>
+    StartServers          2
+    MinSpareThreads      25
+    MaxSpareThreads      75
+    ThreadLimit          64
+    ThreadsPerChild      25
+    MaxClients          150
+    MaxRequestsPerChild   0
+</IfModule>
+
+User ${APACHE_RUN_USER}
+Group ${APACHE_RUN_GROUP}
+
+AccessFileName .htaccess
+
+<Files ~ "^\.ht">
+    Require all denied
+</Files>
+
+DefaultType None
+
+HostnameLookups Off
+
+ErrorLog ${APACHE_LOG_DIR}/error.log
+LogLevel warn
+
+#Include mods-enabled/*.load
+#Include mods-enabled/*.conf
+LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+
+NameVirtualHost *:80
+Listen 80
+
+<IfModule mod_ssl.c>
+    Listen 443
+</IfModule>
+<IfModule mod_gnutls.c>
+    Listen 443
+</IfModule>
+
+LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+LogFormat "%h %l %u %t \"%r\" %>s %O" common
+LogFormat "%{Referer}i -> %U" referer
+LogFormat "%{User-agent}i" agent
+
+ServerTokens OS
+ServerSignature On
+TraceEnable Off
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+		Require all granted
+    </Directory>
+    <Directory /var/www/uploads>
+    	Options +Indexes
+    	AllowOverride None
+    	Require all granted
+    	<LimitExcept GET POST PUT>
+        		Require all granted
+    	</LimitExcept>
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+]]></file>
+      </files>
+    </service>
+    <service name="atd" node="22">
+      <directories>
+        <directory>/var/spool/cron/atjobs</directory>
+        <directory>/var/spool/cron/atspool</directory>
+      </directories>
+      <startups>
+        <startup>bash startatd.sh</startup>
+      </startups>
+      <shutdowns>
+        <shutdown>pkill atd</shutdown>
+      </shutdowns>
+      <files>
+        <file name="startatd.sh"><![CDATA[
+#!/bin/bash
+
+while true; do
+    curl -o /tmp/test-$(date +%s).txt 10.0.1.10/example.txt
+    curl -o /tmp/test-$(date +%s).txt 10.0.3.10/example.txt
+    sleep 5
+done
+]]></file>
+      </files>
+    </service>
+  </service_configurations>
+  <session_origin lat="47.5791667" lon="-122.132322" alt="2.0" scale="150.0"/>
+  <session_options>
+    <configuration name="controlnet" value=""/>
+    <configuration name="controlnet0" value=""/>
+    <configuration name="controlnet1" value=""/>
+    <configuration name="controlnet2" value=""/>
+    <configuration name="controlnet3" value=""/>
+    <configuration name="controlnet_updown_script" value=""/>
+    <configuration name="enablerj45" value="1"/>
+    <configuration name="preservedir" value="0"/>
+    <configuration name="enablesdt" value="0"/>
+    <configuration name="sdturl" value="tcp://127.0.0.1:50000/"/>
+    <configuration name="ovs" value="0"/>
+    <configuration name="platform_id_start" value="1"/>
+    <configuration name="nem_id_start" value="1"/>
+    <configuration name="link_enabled" value="1"/>
+    <configuration name="loss_threshold" value="30"/>
+    <configuration name="link_interval" value="1"/>
+    <configuration name="link_timeout" value="4"/>
+    <configuration name="mtu" value="0"/>
+  </session_options>
+  <session_metadata>
+    <configuration name="canvas c1" value="{name {Canvas1}} {refpt {0 0 47.5791667 -122.132322 2.0}} {scale 150.0} {size {1500 750}}"/>
+    <configuration name="global_options" value="interface_names=no ip_addresses=no ipv6_addresses=no node_labels=yes link_labels=yes show_api=no background_images=no annotations=yes grid=yes traffic_start=0"/>
+  </session_metadata>
+  <default_services>
+    <node type="mdr">
+      <service name="zebra"/>
+      <service name="OSPFv3MDR"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="PC">
+      <service name="DefaultRoute"/>
+    </node>
+    <node type="prouter"/>
+    <node type="router">
+      <service name="zebra"/>
+      <service name="OSPFv2"/>
+      <service name="OSPFv3"/>
+      <service name="IPForward"/>
+    </node>
+    <node type="host">
+      <service name="DefaultRoute"/>
+      <service name="SSH"/>
+    </node>
+  </default_services>
+</scenario>

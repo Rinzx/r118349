@@ -1,0 +1,2666 @@
+node n1 {
+    type router
+    model router
+    network-config {
+	hostname r8
+	!
+	interface eth3
+	 ip address 10.0.7.2/24
+	 ipv6 address 2001:7::2/64
+	 mac address 00:00:00:aa:00:48
+	!
+	interface eth2
+	 ip address 10.0.6.2/24
+	 ipv6 address 2001:6::2/64
+	 mac address 00:00:00:aa:00:46
+	!
+	interface eth1
+	 ip address 10.0.1.1/24
+	 ipv6 address 2001:1::1/64
+	 mac address 00:00:00:aa:00:3b
+	!
+	interface eth0
+	 ip address 10.0.0.1/24
+	 ipv6 address 2001::1/64
+	 mac address 00:00:00:aa:00:39
+	!
+    }
+    canvas c1
+    iconcoords {598.0 181.0}
+    labelcoords {598.0 213.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n3}
+    interface-peer {eth1 n4}
+    interface-peer {eth2 n8}
+    interface-peer {eth3 n5}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.0.1/24
+	  ipv6 address 2001::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.1.1/24
+	  ipv6 address 2001:1::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth2
+	  ip address 10.0.6.2/24
+	  ipv6 address 2001:6::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth3
+	  ip address 10.0.7.2/24
+	  ipv6 address 2001:7::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis B400
+	  net 47.0004.0000.0000.0008.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n2 {
+    type router
+    model router
+    network-config {
+	hostname r15
+	!
+	interface eth3
+	 ip address 10.0.5.1/24
+	 ipv6 address 2001:5::1/64
+	 mac address 00:00:00:aa:00:43
+	!
+	interface eth2
+	 ip address 10.0.4.1/24
+	 ipv6 address 2001:4::1/64
+	 mac address 00:00:00:aa:00:41
+	!
+	interface eth1
+	 ip address 10.0.3.1/24
+	 ipv6 address 2001:3::1/64
+	 mac address 00:00:00:aa:00:3f
+	!
+	interface eth0
+	 ip address 10.0.2.2/24
+	 ipv6 address 2001:2::2/64
+	 mac address 00:00:00:aa:00:3e
+	!
+    }
+    canvas c1
+    iconcoords {838.0 181.0}
+    labelcoords {838.0 213.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n4}
+    interface-peer {eth1 n3}
+    interface-peer {eth2 n6}
+    interface-peer {eth3 n7}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.2.2/24
+	  ipv6 address 2001:2::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.3.1/24
+	  ipv6 address 2001:3::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.4.1/24
+	  ipv6 address 2001:4::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth3
+	  ip address 10.0.5.1/24
+	  ipv6 address 2001:5::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis B400
+	  net 47.0004.0000.0000.0015.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n3 {
+    type router
+    model router
+    network-config {
+	hostname r11
+	!
+	interface eth2
+	 ip address 10.0.9.1/24
+	 ipv6 address 2001:9::1/64
+	 mac address 00:00:00:aa:00:65
+	!
+	interface eth1
+	 ip address 10.0.3.2/24
+	 ipv6 address 2001:3::2/64
+	 mac address 00:00:00:aa:00:40
+	!
+	interface eth0
+	 ip address 10.0.0.2/24
+	 ipv6 address 2001::2/64
+	 mac address 00:00:00:aa:00:3a
+	!
+    }
+    canvas c1
+    iconcoords {714.0 236.0}
+    labelcoords {714.0 268.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n1}
+    interface-peer {eth1 n2}
+    interface-peer {eth2 n16}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.0.2/24
+	  ipv6 address 2001::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.3.2/24
+	  ipv6 address 2001:3::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.9.1/24
+	  ipv6 address 2001:9::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis B400
+	  net 47.0004.0000.0000.0011.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n4 {
+    type router
+    model router
+    network-config {
+	hostname r10
+	!
+	interface eth1
+	 ip address 10.0.2.1/24
+	 ipv6 address 2001:2::1/64
+	 mac address 00:00:00:aa:00:3d
+	!
+	interface eth0
+	 ip address 10.0.1.2/24
+	 ipv6 address 2001:1::2/64
+	 mac address 00:00:00:aa:00:3c
+	!
+    }
+    canvas c1
+    iconcoords {716.0 128.0}
+    labelcoords {716.0 160.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n1}
+    interface-peer {eth1 n2}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.1.2/24
+	  ipv6 address 2001:1::2/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.2.1/24
+	  ipv6 address 2001:2::1/64
+	  ip router isis B400
+	  ipv6 router isis B400
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis B400
+	  net 47.0004.0000.0000.0010.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n5 {
+    type router
+    model router
+    network-config {
+	hostname r5
+	!
+	interface eth3
+	 ip address 10.0.8.2/24
+	 ipv6 address 2001::2/64
+	 mac address 00:00:00:aa:02:f0
+	!
+	interface eth1
+	 ip address 10.0.10.1/24
+	 ipv6 address 2001:10::1/64
+	 mac address 00:00:00:aa:00:67
+	!
+	interface eth2
+	 ip address 10.0.12.2/24
+	 ipv6 address 2001:12::2/64
+	 mac address 00:00:00:aa:00:4e
+	!
+	interface eth0
+	 ip address 10.0.7.1/24
+	 ipv6 address 2001:7::1/64
+	 mac address 00:00:00:aa:00:47
+	!
+    }
+    canvas c1
+    iconcoords {453.0 246.0}
+    labelcoords {453.0 278.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n1}
+    interface-peer {eth2 n8}
+    interface-peer {eth1 n20}
+    interface-peer {eth3 n24}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.7.1/24
+	  ipv6 address 2001:7::1/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.10.1/24
+	  ipv6 address 2001:10::1/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 50
+	!
+	interface eth2
+	  ip address 10.0.12.2/24
+	  ipv6 address 2001:12::2/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth3
+	  ip address 10.0.8.2/24
+	  ipv6 address 2001::2/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis A200
+	  net 47.0002.0000.0000.0005.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n6 {
+    type router
+    model router
+    network-config {
+	hostname r18
+	!
+	interface eth1
+	 ip address 10.0.14.1/24
+	 ipv6 address 2001:14::1/64
+	 mac address 00:00:00:aa:00:69
+	!
+	interface eth2
+	 ip address 10.0.13.2/24
+	 ipv6 address 2001:13::2/64
+	 mac address 00:00:00:aa:00:50
+	!
+	interface eth0
+	 ip address 10.0.4.2/24
+	 ipv6 address 2001:4::2/64
+	 mac address 00:00:00:aa:00:42
+	!
+    }
+    canvas c1
+    iconcoords {976.0 252.0}
+    labelcoords {976.0 284.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n2}
+    interface-peer {eth2 n7}
+    interface-peer {eth1 n19}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.4.2/24
+	  ipv6 address 2001:4::2/64
+	  ip router isis C800
+	  ipv6 router isis C800
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.14.1/24
+	  ipv6 address 2001:14::1/64
+	  ip router isis C800
+	  ipv6 router isis C800
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.13.2/24
+	  ipv6 address 2001:13::2/64
+	  ip router isis C800
+	  ipv6 router isis C800
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis C800
+	  net 47.0008.0000.0000.0018.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n7 {
+    type router
+    model router
+    network-config {
+	hostname r17
+	!
+	interface eth1
+	 ip address 10.0.30.1/24
+	 ipv6 address 2001:29::1/64
+	 mac address 00:00:00:aa:02:f7
+	!
+	interface eth2
+	 ip address 10.0.13.1/24
+	 ipv6 address 2001:13::1/64
+	 mac address 00:00:00:aa:00:4f
+	!
+	interface eth0
+	 ip address 10.0.5.2/24
+	 ipv6 address 2001:5::2/64
+	 mac address 00:00:00:aa:00:44
+	!
+    }
+    canvas c1
+    iconcoords {975.0 124.0}
+    labelcoords {975.0 156.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n2}
+    interface-peer {eth2 n6}
+    interface-peer {eth1 n26}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.5.2/24
+	  ipv6 address 2001:5::2/64
+	  ip router isis H700
+	  ipv6 router isis H700
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 20
+	!
+	interface eth1
+	  ip address 10.0.30.1/24
+	  ipv6 address 2001:29::1/64
+	  ip router isis H700
+	  ipv6 router isis H700
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	interface eth2
+	  ip address 10.0.13.1/24
+	  ipv6 address 2001:13::1/64
+	  ip router isis H700
+	  ipv6 router isis H700
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis H700
+	  net 47.0007.0000.0000.0017.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n8 {
+    type router
+    model router
+    network-config {
+	hostname r4
+	!
+	interface eth2
+	 ip address 10.0.12.1/24
+	 ipv6 address 2001:12::1/64
+	 mac address 00:00:00:aa:00:4d
+	!
+	interface eth0
+	 ip address 10.0.6.1/24
+	 ipv6 address 2001:6::1/64
+	 mac address 00:00:00:aa:00:45
+	!
+    }
+    canvas c1
+    iconcoords {453.0 130.0}
+    labelcoords {453.0 162.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n1}
+    interface-peer {eth2 n5}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.6.1/24
+	  ipv6 address 2001:6::1/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth2
+	  ip address 10.0.12.1/24
+	  ipv6 address 2001:12::1/64
+	  ip router isis A200
+	  ipv6 router isis A200
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis A200
+	  net 47.0002.0000.0000.0004.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n10 {
+    type router
+    model PC
+    network-config {
+	hostname n1
+	!
+	interface eth0
+	 ip address 10.0.32.20/24
+	 ipv6 address 2001:31::20/64
+	 mac address 00:00:00:aa:02:fb
+	!
+    }
+    canvas c1
+    iconcoords {96.0 368.0}
+    labelcoords {96.0 400.0}
+    services {atd DefaultRoute}
+    interface-peer {eth0 n28}
+    custom-config {
+	custom-config-id service:atd
+	custom-command atd
+	config {
+	files=('startatd.sh', )
+	}
+    }
+    custom-config {
+	custom-config-id service:atd:startatd.sh
+	custom-command startatd.sh
+	config {
+	#!/bin/bash
+	
+	while true; do
+	    curl -o /tmp/test-$(date +%s).txt 10.0.31.10/example.txt
+	    curl -o /tmp/test-$(date +%s).txt 10.0.16.10/example.txt
+	    sleep 5
+	done
+	
+	}
+    }
+}
+
+node n13 {
+    type router
+    model host
+    network-config {
+	hostname s3
+	!
+	interface eth0
+	 ip address 10.0.31.10/24
+	 ipv6 address 2001:30::10/64
+	 mac address 00:00:00:aa:02:fa
+	!
+    }
+    canvas c1
+    iconcoords {1459.0 124.0}
+    labelcoords {1459.0 156.0}
+    services {DefaultRoute FTP HTTP SSH}
+    interface-peer {eth0 n26}
+    custom-config {
+	custom-config-id service:HTTP
+	custom-command HTTP
+	config {
+	dirs=('/etc/apache2', '/var/run/apache2', '/var/log/apache2', '/var/lock/apache2', '/var/www', '/run/lock', )
+	files=('/etc/apache2/apache2.conf', '/etc/apache2/envvars', '/var/www/index.html', '/var/www/example.txt', )
+	}
+    }
+    custom-config {
+	custom-config-id service:HTTP:/etc/apache2/apache2.conf
+	custom-command /etc/apache2/apache2.conf
+	config {
+	# apache2.conf generated by utility.py:HttpService
+	Mutex file:${APACHE_LOCK_DIR} default
+	PidFile ${APACHE_PID_FILE}
+	Timeout 300
+	KeepAlive On
+	MaxKeepAliveRequests 100
+	KeepAliveTimeout 5
+	LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+	
+	<IfModule mpm_prefork_module>
+	    StartServers          5
+	    MinSpareServers       5
+	    MaxSpareServers      10
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_worker_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_event_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	User ${APACHE_RUN_USER}
+	Group ${APACHE_RUN_GROUP}
+	
+	AccessFileName .htaccess
+	
+	<Files ~ "^\.ht">
+	    Require all denied
+	</Files>
+	
+	DefaultType None
+	
+	HostnameLookups Off
+	
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	
+	#Include mods-enabled/*.load
+	#Include mods-enabled/*.conf
+	LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+	LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+	LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+	LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+	LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+	LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+	LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+	LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+	
+	NameVirtualHost *:80
+	Listen 80
+	
+	<IfModule mod_ssl.c>
+	    Listen 443
+	</IfModule>
+	<IfModule mod_gnutls.c>
+	    Listen 443
+	</IfModule>
+	
+	LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O" common
+	LogFormat "%{Referer}i -> %U" referer
+	LogFormat "%{User-agent}i" agent
+	
+	ServerTokens OS
+	ServerSignature On
+	TraceEnable Off
+	
+	<VirtualHost *:80>
+	    ServerAdmin webmaster@localhost
+	    DocumentRoot /var/www
+	    <Directory />
+	        Options FollowSymLinks
+	        AllowOverride None
+	    </Directory>
+	    <Directory /var/www/>
+	        Options Indexes FollowSymLinks MultiViews
+	        AllowOverride All
+			Require all granted
+	    </Directory>
+	    <Directory /var/www/uploads>
+	    	Options +Indexes
+	    	AllowOverride None
+	    	Require all granted
+	    	<LimitExcept GET POST PUT>
+	        		Require all granted
+	    	</LimitExcept>
+	    </Directory>
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    LogLevel warn
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	}
+    }
+    custom-config {
+	custom-config-id service:FTP
+	custom-command FTP
+	config {
+	files=('vsftpd.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FTP:vsftpd.conf
+	custom-command vsftpd.conf
+	config {
+	# vsftpd.conf auto-generated by FTP service (utility.py)
+	listen=YES
+	anonymous_enable=YES
+	local_enable=YES
+	dirmessage_enable=YES
+	use_localtime=YES
+	xferlog_enable=YES
+	write_enable=YES
+	anon_upload_enable=YES
+	anon_mkdir_write_enable=YES
+	connect_from_port_20=YES
+	xferlog_file=/var/log/vsftpd.log
+	ftpd_banner=Welcome to the CORE FTP service
+	secure_chroot_dir=/var/run/vsftpd/empty
+	anon_root=/var/ftp
+	}
+    }
+}
+
+node n11 {
+    type router
+    model router
+    network-config {
+	hostname r9
+	!
+	interface eth3
+	 ip address 10.0.21.1/24
+	 ipv6 address 2001:21::1/64
+	 mac address 00:00:00:aa:00:58
+	!
+	interface eth2
+	 ip address 10.0.20.1/24
+	 ipv6 address 2001:20::1/64
+	 mac address 00:00:00:aa:00:56
+	!
+	interface eth1
+	 ip address 10.0.19.1/24
+	 ipv6 address 2001:19::1/64
+	 mac address 00:00:00:aa:00:53
+	!
+	interface eth0
+	 ip address 10.0.18.1/24
+	 ipv6 address 2001:18::1/64
+	 mac address 00:00:00:aa:00:51
+	!
+    }
+    canvas c1
+    iconcoords {591.0 398.0}
+    labelcoords {591.0 430.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n15}
+    interface-peer {eth1 n16}
+    interface-peer {eth2 n20}
+    interface-peer {eth3 n17}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.18.1/24
+	  ipv6 address 2001:18::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.19.1/24
+	  ipv6 address 2001:19::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth2
+	  ip address 10.0.20.1/24
+	  ipv6 address 2001:20::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth3
+	  ip address 10.0.21.1/24
+	  ipv6 address 2001:21::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis B500
+	  net 47.0005.0000.0000.0009.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n14 {
+    type router
+    model router
+    network-config {
+	hostname r16
+	!
+	interface eth3
+	 ip address 10.0.25.1/24
+	 ipv6 address 2001:25::1/64
+	 mac address 00:00:00:aa:00:5f
+	!
+	interface eth2
+	 ip address 10.0.24.1/24
+	 ipv6 address 2001:24::1/64
+	 mac address 00:00:00:aa:00:5d
+	!
+	interface eth1
+	 ip address 10.0.23.1/24
+	 ipv6 address 2001:23::1/64
+	 mac address 00:00:00:aa:00:5b
+	!
+	interface eth0
+	 ip address 10.0.22.1/24
+	 ipv6 address 2001:22::1/64
+	 mac address 00:00:00:aa:00:5a
+	!
+    }
+    canvas c1
+    iconcoords {836.0 396.0}
+    labelcoords {836.0 428.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n16}
+    interface-peer {eth1 n15}
+    interface-peer {eth2 n18}
+    interface-peer {eth3 n19}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.22.1/24
+	  ipv6 address 2001:22::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.23.1/24
+	  ipv6 address 2001:23::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.24.1/24
+	  ipv6 address 2001:24::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth3
+	  ip address 10.0.25.1/24
+	  ipv6 address 2001:25::1/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis B500
+	  net 47.0005.0000.0000.0016.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n15 {
+    type router
+    model router
+    network-config {
+	hostname r13
+	!
+	interface eth2
+	 ip address 10.0.15.1/24
+	 ipv6 address 2001:15::1/64
+	 mac address 00:00:00:aa:00:6b
+	!
+	interface eth1
+	 ip address 10.0.23.2/24
+	 ipv6 address 2001:23::2/64
+	 mac address 00:00:00:aa:00:5c
+	!
+	interface eth0
+	 ip address 10.0.18.2/24
+	 ipv6 address 2001:18::2/64
+	 mac address 00:00:00:aa:00:52
+	!
+    }
+    canvas c1
+    iconcoords {712.0 464.0}
+    labelcoords {712.0 496.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n11}
+    interface-peer {eth1 n14}
+    interface-peer {eth2 n9}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.18.2/24
+	  ipv6 address 2001:18::2/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.23.2/24
+	  ipv6 address 2001:23::2/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.15.1/24
+	  ipv6 address 2001:15::1/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	router isis H600
+	  net 47.0006.0000.0000.0013.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n16 {
+    type router
+    model router
+    network-config {
+	hostname r12
+	!
+	interface eth2
+	 ip address 10.0.9.2/24
+	 ipv6 address 2001:9::2/64
+	 mac address 00:00:00:aa:00:66
+	!
+	interface eth1
+	 ip address 10.0.22.2/24
+	 ipv6 address 2001:22::2/64
+	 mac address 00:00:00:aa:00:59
+	!
+	interface eth0
+	 ip address 10.0.19.2/24
+	 ipv6 address 2001:19::2/64
+	 mac address 00:00:00:aa:00:54
+	!
+    }
+    canvas c1
+    iconcoords {714.0 350.0}
+    labelcoords {714.0 382.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n11}
+    interface-peer {eth1 n14}
+    interface-peer {eth2 n3}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.19.2/24
+	  ipv6 address 2001:19::2/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.22.2/24
+	  ipv6 address 2001:22::2/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.9.2/24
+	  ipv6 address 2001:9::2/64
+	  ip router isis B500
+	  ipv6 router isis B500
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	router isis B500
+	  net 47.0005.0000.0000.0000.0012.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n17 {
+    type router
+    model router
+    network-config {
+	hostname r7
+	!
+	interface eth2
+	 ip address 10.0.26.1/24
+	 ipv6 address 2001:26::1/64
+	 mac address 00:00:00:aa:00:62
+	!
+	interface eth0
+	 ip address 10.0.21.2/24
+	 ipv6 address 2001:21::2/64
+	 mac address 00:00:00:aa:00:57
+	!
+    }
+    canvas c1
+    iconcoords {454.0 469.0}
+    labelcoords {454.0 501.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n11}
+    interface-peer {eth2 n20}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.21.2/24
+	  ipv6 address 2001:21::2/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth2
+	  ip address 10.0.26.1/24
+	  ipv6 address 2001:26::1/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis A300
+	  net 47.0003.0000.0000.0007.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n18 {
+    type router
+    model router
+    network-config {
+	hostname r20
+	!
+	interface eth2
+	 ip address 10.0.27.1/24
+	 ipv6 address 2001:27::1/64
+	 mac address 00:00:00:aa:00:64
+	!
+	interface eth0
+	 ip address 10.0.24.2/24
+	 ipv6 address 2001:24::2/64
+	 mac address 00:00:00:aa:00:5e
+	!
+    }
+    canvas c1
+    iconcoords {976.0 473.0}
+    labelcoords {976.0 505.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n14}
+    interface-peer {eth2 n19}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.24.2/24
+	  ipv6 address 2001:24::2/64
+	  ip router isis C900
+	  ipv6 router isis C900
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth2
+	  ip address 10.0.27.1/24
+	  ipv6 address 2001:27::1/64
+	  ip router isis C900
+	  ipv6 router isis C900
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis C900
+	  net 47.0009.0000.0000.0020.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n19 {
+    type router
+    model router
+    network-config {
+	hostname r19
+	!
+	interface eth1
+	 ip address 10.0.14.2/24
+	 ipv6 address 2001:14::2/64
+	 mac address 00:00:00:aa:00:6a
+	!
+	interface eth2
+	 ip address 10.0.27.2/24
+	 ipv6 address 2001:27::2/64
+	 mac address 00:00:00:aa:00:63
+	!
+	interface eth0
+	 ip address 10.0.25.2/24
+	 ipv6 address 2001:25::2/64
+	 mac address 00:00:00:aa:00:60
+	!
+    }
+    canvas c1
+    iconcoords {975.0 345.0}
+    labelcoords {975.0 377.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n14}
+    interface-peer {eth2 n18}
+    interface-peer {eth1 n6}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.25.2/24
+	  ipv6 address 2001:25::2/64
+	  ip router isis C900
+	  ipv6 router isis C900
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.14.2/24
+	  ipv6 address 2001:14::2/64
+	  ip router isis C900
+	  ipv6 router isis C900
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth2
+	  ip address 10.0.27.2/24
+	  ipv6 address 2001:27::2/64
+	  ip router isis C900
+	  ipv6 router isis C900
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis C900
+	  net 47.0009.0000.0000.0019.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n20 {
+    type router
+    model router
+    network-config {
+	hostname r6
+	!
+	interface eth3
+	 ip address 10.0.11.2/24
+	 ipv6 address 2001:8::2/64
+	 mac address 00:00:00:aa:02:f2
+	!
+	interface eth1
+	 ip address 10.0.10.2/24
+	 ipv6 address 2001:10::2/64
+	 mac address 00:00:00:aa:00:68
+	!
+	interface eth2
+	 ip address 10.0.26.2/24
+	 ipv6 address 2001:26::2/64
+	 mac address 00:00:00:aa:00:61
+	!
+	interface eth0
+	 ip address 10.0.20.2/24
+	 ipv6 address 2001:20::2/64
+	 mac address 00:00:00:aa:00:55
+	!
+    }
+    canvas c1
+    iconcoords {453.0 341.0}
+    labelcoords {453.0 373.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n11}
+    interface-peer {eth2 n17}
+    interface-peer {eth1 n5}
+    interface-peer {eth3 n25}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.20.2/24
+	  ipv6 address 2001:20::2/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth1
+	  ip address 10.0.10.2/24
+	  ipv6 address 2001:10::2/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 50
+	!
+	interface eth2
+	  ip address 10.0.26.2/24
+	  ipv6 address 2001:26::2/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	interface eth3
+	  ip address 10.0.11.2/24
+	  ipv6 address 2001:8::2/64
+	  ip router isis A300
+	  ipv6 router isis A300
+	  isis circuit-type level-2-only
+	  isis network point-to-point
+	  isis metric level-2 30
+	!
+	router isis A300
+	  net 47.0003.0000.0000.0006.00
+	  metric-style wide
+	  is-type level-2-only
+	!
+	
+	}
+    }
+}
+
+node n9 {
+    type router
+    model router
+    network-config {
+	hostname r14
+	!
+	interface eth0
+	 ip address 10.0.15.2/24
+	 ipv6 address 2001:15::2/64
+	 mac address 00:00:00:aa:00:6c
+	!
+	interface eth1
+	 ip address 10.0.16.1/24
+	 ipv6 address 2001:16::1/64
+	 mac address 00:00:00:aa:00:6f
+	!
+    }
+    canvas c1
+    iconcoords {711.0 575.0}
+    labelcoords {711.0 607.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth1 n12}
+    interface-peer {eth0 n15}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.15.2/24
+	  ipv6 address 2001:15::2/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	!
+	interface eth1
+	  ip address 10.0.16.1/24
+	  ipv6 address 2001:16::1/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	!
+	interface eth2
+	  ip address 10.0.28.1/24
+	  ipv6 address 2001:28::1/64
+	  ip router isis H600
+	  ipv6 router isis H600
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	!
+	router isis H600
+	  net 47.0006.0000.0000.0014.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n21 {
+    type router
+    model host
+    network-config {
+	hostname s2
+	!
+	interface eth0
+	 ip address 10.0.16.10/24
+	 ipv6 address 2001:16::10/64
+	 mac address 00:00:00:aa:00:01
+	!
+    }
+    canvas c1
+    iconcoords {980.0 575.0}
+    labelcoords {980.0 607.0}
+    services {DefaultRoute FTP HTTP SSH}
+    interface-peer {eth0 n12}
+    custom-config {
+	custom-config-id service:FTP
+	custom-command FTP
+	config {
+	files=('vsftpd.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FTP:vsftpd.conf
+	custom-command vsftpd.conf
+	config {
+	# vsftpd.conf auto-generated by FTP service (utility.py)
+	listen=YES
+	anonymous_enable=YES
+	local_enable=YES
+	dirmessage_enable=YES
+	use_localtime=YES
+	xferlog_enable=YES
+	write_enable=YES
+	anon_upload_enable=YES
+	anon_mkdir_write_enable=YES
+	connect_from_port_20=YES
+	xferlog_file=/var/log/vsftpd.log
+	ftpd_banner=Welcome to the CORE FTP service
+	secure_chroot_dir=/var/run/vsftpd/empty
+	anon_root=/var/ftp
+	
+	}
+    }
+    custom-config {
+	custom-config-id service:HTTP
+	custom-command HTTP
+	config {
+	dirs=('/etc/apache2', '/var/run/apache2', '/var/log/apache2', '/var/lock/apache2', '/var/www', '/run/lock', )
+	files=('/etc/apache2/apache2.conf', '/etc/apache2/envvars', '/var/www/index.html', '/var/www/example.txt', )
+	}
+    }
+    custom-config {
+	custom-config-id service:HTTP:/etc/apache2/apache2.conf
+	custom-command /etc/apache2/apache2.conf
+	config {
+	# apache2.conf generated by utility.py:HttpService
+	Mutex file:${APACHE_LOCK_DIR} default
+	PidFile ${APACHE_PID_FILE}
+	Timeout 300
+	KeepAlive On
+	MaxKeepAliveRequests 100
+	KeepAliveTimeout 5
+	LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+	
+	<IfModule mpm_prefork_module>
+	    StartServers          5
+	    MinSpareServers       5
+	    MaxSpareServers      10
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_worker_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_event_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	User ${APACHE_RUN_USER}
+	Group ${APACHE_RUN_GROUP}
+	
+	AccessFileName .htaccess
+	
+	<Files ~ "^\.ht">
+	    Require all denied
+	</Files>
+	
+	DefaultType None
+	
+	HostnameLookups Off
+	
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	
+	#Include mods-enabled/*.load
+	#Include mods-enabled/*.conf
+	LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+	LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+	LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+	LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+	LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+	LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+	LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+	LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+	
+	NameVirtualHost *:80
+	Listen 80
+	
+	<IfModule mod_ssl.c>
+	    Listen 443
+	</IfModule>
+	<IfModule mod_gnutls.c>
+	    Listen 443
+	</IfModule>
+	
+	LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O" common
+	LogFormat "%{Referer}i -> %U" referer
+	LogFormat "%{User-agent}i" agent
+	
+	ServerTokens OS
+	ServerSignature On
+	TraceEnable Off
+	
+	<VirtualHost *:80>
+	    ServerAdmin webmaster@localhost
+	    DocumentRoot /var/www
+	    <Directory />
+	        Options FollowSymLinks
+	        AllowOverride None
+	    </Directory>
+	    <Directory /var/www/>
+	        Options Indexes FollowSymLinks MultiViews
+	        AllowOverride All
+			Require all granted
+	    </Directory>
+	    <Directory /var/www/uploads>
+	    	Options +Indexes
+	    	AllowOverride None
+	    	Require all granted
+	    	<LimitExcept GET POST PUT>
+	        		Require all granted
+	    	</LimitExcept>
+	    </Directory>
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    LogLevel warn
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	}
+    }
+}
+
+node n22 {
+    type router
+    model PC
+    network-config {
+	hostname n2
+	!
+	interface eth0
+	 ip address 10.0.16.20/24
+	 ipv6 address 2001:16::20/64
+	 mac address 00:00:00:aa:00:70
+	!
+    }
+    canvas c1
+    iconcoords {844.0 677.0}
+    labelcoords {844.0 709.0}
+    services {atd DefaultRoute}
+    interface-peer {eth0 n12}
+    custom-config {
+	custom-config-id service:atd
+	custom-command atd
+	config {
+	files=('startatd.sh', )
+	}
+    }
+    custom-config {
+	custom-config-id service:atd:startatd.sh
+	custom-command startatd.sh
+	config {
+	#!/bin/bash
+	
+	while true; do
+	    curl -o /tmp/test-$(date +%s).txt 10.0.32.10/example.txt
+	    curl -o /tmp/test-$(date +%s).txt 10.0.31.10/example.txt
+	    sleep 5
+	done
+	
+	}
+    }
+}
+
+node n24 {
+    type router
+    model router
+    network-config {
+	hostname r2
+	!
+	interface eth1
+	 ip address 10.0.29.2/24
+	 ipv6 address 2001:17::2/64
+	 mac address 00:00:00:aa:02:f6
+	!
+	interface eth0
+	 ip address 10.0.8.1/24
+	 ipv6 address 2001::1/64
+	 mac address 00:00:00:aa:02:ef
+	!
+    }
+    canvas c1
+    iconcoords {274.0 245.0}
+    labelcoords {274.0 277.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n5}
+    interface-peer {eth1 n27}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.8.1/24
+	  ipv6 address 2001::1/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 10
+	!
+	interface eth1
+	  ip address 10.0.29.2/24
+	  ipv6 address 2001:17::2/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	router isis H100
+	  net 47.0001.0000.0000.0002.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n25 {
+    type router
+    model router
+    network-config {
+	hostname r3
+	!
+	interface eth1
+	 ip address 10.0.17.2/24
+	 ipv6 address 2001:11::2/64
+	 mac address 00:00:00:aa:02:f4
+	!
+	interface eth0
+	 ip address 10.0.11.1/24
+	 ipv6 address 2001:8::1/64
+	 mac address 00:00:00:aa:02:f1
+	!
+    }
+    canvas c1
+    iconcoords {277.0 341.0}
+    labelcoords {277.0 373.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n20}
+    interface-peer {eth1 n27}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.11.1/24
+	  ipv6 address 2001:8::1/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-2 20
+	!
+	interface eth1
+	  ip address 10.0.17.2/24
+	  ipv6 address 2001:11::2/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 20
+	!
+	router isis H100
+	  net 47.0001.0000.0000.0003.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n26 {
+    type router
+    model router
+    network-config {
+	hostname r21
+	!
+	interface eth1
+	 ip address 10.0.31.1/24
+	 ipv6 address 2001:30::1/64
+	 mac address 00:00:00:aa:02:f9
+	!
+	interface eth0
+	 ip address 10.0.30.2/24
+	 ipv6 address 2001:29::2/64
+	 mac address 00:00:00:aa:02:f8
+	!
+    }
+    canvas c1
+    iconcoords {1208.0 123.0}
+    labelcoords {1208.0 155.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth0 n7}
+    interface-peer {eth1 n13}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.30.2/24
+	  ipv6 address 2001:29::2/64
+	  ip router isis H700
+	  ipv6 router isis H700
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	interface eth1
+	  ip address 10.0.31.1/24
+	  ipv6 address 2001:30::1/64
+	  ip router isis H700
+	  ipv6 router isis H700
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	router isis H700
+	  net 47.0007.0000.0000.0021.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n27 {
+    type router
+    model router
+    network-config {
+	hostname r1
+	!
+	interface eth1
+	 ip address 10.0.29.1/24
+	 ipv6 address 2001:17::1/64
+	 mac address 00:00:00:aa:02:f5
+	!
+	interface eth0
+	 ip address 10.0.17.1/24
+	 ipv6 address 2001:11::1/64
+	 mac address 00:00:00:aa:02:f3
+	!
+	interface eth2
+	 ip address 10.0.32.1/24
+	 ipv6 address 2001:31::1/64
+	 mac address 00:00:00:aa:02:fd
+	!
+    }
+    canvas c1
+    iconcoords {174.0 287.0}
+    labelcoords {174.0 319.0}
+    services {FRRISIS FRRzebra IPForward}
+    interface-peer {eth2 n28}
+    interface-peer {eth0 n25}
+    interface-peer {eth1 n24}
+    custom-config {
+	custom-config-id service:FRRzebra
+	custom-command FRRzebra
+	config {
+	files=('/usr/local/etc/frr/daemons', '/usr/local/etc/frr/vtysh.conf', 'frrboot.sh', '/usr/local/etc/frr/frr.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FRRzebra:/usr/local/etc/frr/frr.conf
+	custom-command /usr/local/etc/frr/frr.conf
+	config {
+	interface eth0
+	  ip address 10.0.17.1/24
+	  ipv6 address 2001:11::1/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 20
+	!
+	interface eth1
+	  ip address 10.0.29.1/24
+	  ipv6 address 2001:17::1/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	interface eth2
+	  ip address 10.0.32.1/24
+	  ipv6 address 2001:31::1/64
+	  ip router isis H100
+	  ipv6 router isis H100
+	  isis circuit-type level-1-2
+	  isis network point-to-point
+	  isis metric level-1 10
+	!
+	router isis H100
+	  net 47.0001.0000.0000.0001.00
+	  metric-style wide
+	  is-type level-1-2
+	!
+	
+	}
+    }
+}
+
+node n29 {
+    type router
+    model host
+    network-config {
+	hostname s1
+	!
+	interface eth0
+	 ip address 10.0.32.10/24
+	 ipv6 address 2001:31::10/64
+	 mac address 00:00:00:aa:02:fc
+	!
+    }
+    canvas c1
+    iconcoords {95.0 209.0}
+    labelcoords {95.0 241.0}
+    services {DefaultRoute FTP HTTP SSH}
+    interface-peer {eth0 n28}
+    custom-config {
+	custom-config-id service:FTP
+	custom-command FTP
+	config {
+	files=('vsftpd.conf', )
+	}
+    }
+    custom-config {
+	custom-config-id service:FTP:vsftpd.conf
+	custom-command vsftpd.conf
+	config {
+	# vsftpd.conf auto-generated by FTP service (utility.py)
+	listen=YES
+	anonymous_enable=YES
+	local_enable=YES
+	dirmessage_enable=YES
+	use_localtime=YES
+	xferlog_enable=YES
+	write_enable=YES
+	anon_upload_enable=YES
+	anon_mkdir_write_enable=YES
+	connect_from_port_20=YES
+	xferlog_file=/var/log/vsftpd.log
+	ftpd_banner=Welcome to the CORE FTP service
+	secure_chroot_dir=/var/run/vsftpd/empty
+	anon_root=/var/ftp
+	
+	}
+    }
+    custom-config {
+	custom-config-id service:HTTP
+	custom-command HTTP
+	config {
+	dirs=('/etc/apache2', '/var/run/apache2', '/var/log/apache2', '/var/lock/apache2', '/var/www', '/run/lock', )
+	files=('/etc/apache2/apache2.conf', '/etc/apache2/envvars', '/var/www/index.html', '/var/www/example.txt', )
+	}
+    }
+    custom-config {
+	custom-config-id service:HTTP:/etc/apache2/apache2.conf
+	custom-command /etc/apache2/apache2.conf
+	config {
+	# apache2.conf generated by utility.py:HttpService
+	Mutex file:${APACHE_LOCK_DIR} default
+	PidFile ${APACHE_PID_FILE}
+	Timeout 300
+	KeepAlive On
+	MaxKeepAliveRequests 100
+	KeepAliveTimeout 5
+	LoadModule mpm_worker_module /usr/lib/apache2/modules/mod_mpm_worker.so
+	
+	<IfModule mpm_prefork_module>
+	    StartServers          5
+	    MinSpareServers       5
+	    MaxSpareServers      10
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_worker_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	<IfModule mpm_event_module>
+	    StartServers          2
+	    MinSpareThreads      25
+	    MaxSpareThreads      75
+	    ThreadLimit          64
+	    ThreadsPerChild      25
+	    MaxClients          150
+	    MaxRequestsPerChild   0
+	</IfModule>
+	
+	User ${APACHE_RUN_USER}
+	Group ${APACHE_RUN_GROUP}
+	
+	AccessFileName .htaccess
+	
+	<Files ~ "^\.ht">
+	    Require all denied
+	</Files>
+	
+	DefaultType None
+	
+	HostnameLookups Off
+	
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	LogLevel warn
+	
+	#Include mods-enabled/*.load
+	#Include mods-enabled/*.conf
+	LoadModule alias_module /usr/lib/apache2/modules/mod_alias.so
+	LoadModule auth_basic_module /usr/lib/apache2/modules/mod_auth_basic.so
+	LoadModule authz_core_module /usr/lib/apache2/modules/mod_authz_core.so
+	LoadModule authz_host_module /usr/lib/apache2/modules/mod_authz_host.so
+	LoadModule authz_user_module /usr/lib/apache2/modules/mod_authz_user.so
+	LoadModule autoindex_module /usr/lib/apache2/modules/mod_autoindex.so
+	LoadModule dir_module /usr/lib/apache2/modules/mod_dir.so
+	LoadModule env_module /usr/lib/apache2/modules/mod_env.so
+	
+	NameVirtualHost *:80
+	Listen 80
+	
+	<IfModule mod_ssl.c>
+	    Listen 443
+	</IfModule>
+	<IfModule mod_gnutls.c>
+	    Listen 443
+	</IfModule>
+	
+	LogFormat "%v:%p %h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" vhost_combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O \"%{Referer}i\" \"%{User-Agent}i\"" combined
+	LogFormat "%h %l %u %t \"%r\" %>s %O" common
+	LogFormat "%{Referer}i -> %U" referer
+	LogFormat "%{User-agent}i" agent
+	
+	ServerTokens OS
+	ServerSignature On
+	TraceEnable Off
+	
+	<VirtualHost *:80>
+	    ServerAdmin webmaster@localhost
+	    DocumentRoot /var/www
+	    <Directory />
+	        Options FollowSymLinks
+	        AllowOverride None
+	    </Directory>
+	    <Directory /var/www/>
+	        Options Indexes FollowSymLinks MultiViews
+	        AllowOverride All
+			Require all granted
+	    </Directory>
+	    <Directory /var/www/uploads>
+	    	Options +Indexes
+	    	AllowOverride None
+	    	Require all granted
+	    	<LimitExcept GET POST PUT>
+	        		Require all granted
+	    	</LimitExcept>
+	    </Directory>
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    LogLevel warn
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	
+	
+	}
+    }
+}
+
+node n12 {
+    type lanswitch
+    network-config {
+	hostname sw1
+	!
+    }
+    canvas c1
+    iconcoords {844.0 574.0}
+    labelcoords {844.0 598.0}
+    interface-peer {e0 n9}
+    interface-peer {e1 n22}
+    interface-peer {e2 n21}
+}
+
+node n28 {
+    type lanswitch
+    network-config {
+	hostname n28
+	!
+    }
+    canvas c1
+    iconcoords {96.0 288.0}
+    labelcoords {96.0 312.0}
+    interface-peer {e0 n10}
+    interface-peer {e1 n29}
+    interface-peer {e2 n27}
+}
+
+link l1 {
+    nodes {n12 n9}
+}
+
+link l2 {
+    nodes {n12 n22}
+}
+
+link l3 {
+    nodes {n12 n21}
+}
+
+link l4 {
+    nodes {n28 n10}
+}
+
+link l5 {
+    nodes {n28 n29}
+}
+
+link l6 {
+    nodes {n28 n27}
+}
+
+link l7 {
+    nodes {n1 n3}
+}
+
+link l8 {
+    nodes {n1 n4}
+}
+
+link l9 {
+    nodes {n4 n2}
+}
+
+link l10 {
+    nodes {n2 n3}
+}
+
+link l11 {
+    nodes {n2 n6}
+}
+
+link l12 {
+    nodes {n2 n7}
+}
+
+link l13 {
+    nodes {n8 n1}
+}
+
+link l14 {
+    nodes {n5 n1}
+}
+
+link l15 {
+    nodes {n8 n5}
+}
+
+link l16 {
+    nodes {n7 n6}
+}
+
+link l17 {
+    nodes {n11 n15}
+}
+
+link l18 {
+    nodes {n11 n16}
+}
+
+link l19 {
+    nodes {n20 n11}
+}
+
+link l20 {
+    nodes {n17 n11}
+}
+
+link l21 {
+    nodes {n16 n14}
+}
+
+link l22 {
+    nodes {n14 n15}
+}
+
+link l23 {
+    nodes {n14 n18}
+}
+
+link l24 {
+    nodes {n14 n19}
+}
+
+link l25 {
+    nodes {n20 n17}
+}
+
+link l26 {
+    nodes {n19 n18}
+}
+
+link l27 {
+    nodes {n3 n16}
+}
+
+link l28 {
+    nodes {n5 n20}
+}
+
+link l29 {
+    nodes {n6 n19}
+}
+
+link l30 {
+    nodes {n15 n9}
+}
+
+link l31 {
+    nodes {n24 n5}
+}
+
+link l32 {
+    nodes {n25 n20}
+}
+
+link l33 {
+    nodes {n27 n25}
+}
+
+link l34 {
+    nodes {n27 n24}
+}
+
+link l35 {
+    nodes {n7 n26}
+}
+
+link l36 {
+    nodes {n26 n13}
+}
+
+annotation a4 {
+    type text
+    iconcoords {311.0 337.0}
+    label {}
+    canvas c1
+}
+
+annotation a1 {
+    type text
+    iconcoords {120.0 334.0}
+    label {}
+    canvas c1
+}
+
+annotation a3 {
+    iconcoords {927 80 1175 156}
+    type rectangle
+    label {H700}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #cbffff
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a2 {
+    iconcoords {942 180 1054 284}
+    type oval
+    label {C800}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #cfe3ff
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a5 {
+    iconcoords {546.0 84.0 885.0 272.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #c0c6ff
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a6 {
+    iconcoords {550.0 301.0 882.0 428.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #c0c0cb
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a7 {
+    iconcoords {404.0 75.0 500.0 270.0}
+    type rectangle
+    label {A200}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #e1d3ff
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a8 {
+    iconcoords {419 287 505 499}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #ecd8d6
+    width 0
+    border black
+    rad 24
+    canvas c1
+}
+
+annotation a9 {
+    iconcoords {936 285 1054 532}
+    type rectangle
+    label {.C900}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #e0ffde
+    width 0
+    border #001300
+    rad 25
+    canvas c1
+}
+
+annotation a10 {
+    iconcoords {143 195 338 393}
+    type oval
+    label {H100}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #b3d3ff
+    width 0
+    border black
+    canvas c1
+}
+
+annotation a12 {
+    type text
+    iconcoords {243.0 431.0}
+    label {}
+    canvas c1
+}
+
+annotation a13 {
+    type text
+    iconcoords {230.0 416.0}
+    label {}
+    canvas c1
+}
+
+annotation a14 {
+    type text
+    iconcoords {279.0 418.0}
+    label {}
+    canvas c1
+}
+
+annotation a16 {
+    type text
+    iconcoords {457.0 532.0}
+    label {}
+    canvas c1
+}
+
+annotation a17 {
+    type text
+    iconcoords {455.0 499.0}
+    label {}
+    canvas c1
+}
+
+annotation a11 {
+    type text
+    iconcoords {475.0 426.0}
+    label {}
+    canvas c1
+}
+
+annotation a15 {
+    type text
+    iconcoords {475.0 372.0}
+    label {}
+    canvas c1
+}
+
+annotation a18 {
+    type text
+    iconcoords {119.0 79.0}
+    label {}
+    canvas c1
+}
+
+annotation a19 {
+    type text
+    iconcoords {916.0 339.0}
+    label {}
+    canvas c1
+}
+
+annotation a20 {
+    iconcoords {685.0 440.0 761.0 614.0}
+    type rectangle
+    label {}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    color #c0f3ff
+    width 0
+    border black
+    rad 25
+    canvas c1
+}
+
+annotation a21 {
+    type text
+    iconcoords {144.0 177.0}
+    label {}
+    canvas c1
+}
+
+annotation a22 {
+    iconcoords {644.0 563.0}
+    type text
+    label {H600}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a23 {
+    type text
+    iconcoords {738.0 480.0}
+    label {}
+    canvas c1
+}
+
+annotation a24 {
+    iconcoords {844.0 307.0}
+    type text
+    label {B500}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a25 {
+    type text
+    iconcoords {478.0 309.0}
+    label {}
+    canvas c1
+}
+
+annotation a26 {
+    iconcoords {436.0 509.0}
+    type text
+    label {A300}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a27 {
+    iconcoords {858.0 100.0}
+    type text
+    label {B400}
+    labelcolor black
+    fontfamily {Arial}
+    fontsize {12}
+    canvas c1
+}
+
+annotation a28 {
+    type text
+    iconcoords {669.0 560.0}
+    label {}
+    canvas c1
+}
+
+canvas c1 {
+    name {Canvas1}
+    refpt {0 0 47.5791667 -122.132322 2.0}
+    scale {150.0}
+    size {1600 750}
+}
+
+option global {
+    interface_names no
+    ip_addresses no
+    ipv6_addresses no
+    node_labels yes
+    link_labels yes
+    show_api yes
+    background_images no
+    annotations yes
+    grid yes
+    traffic_start 0
+}
+
+option session {
+    controlnet=
+    controlnet0=
+    controlnet1=
+    controlnet2=
+    controlnet3=
+    controlnet_updown_script=
+    enablerj45=1
+    enablesdt=0
+    link_enabled=1
+    link_interval=1
+    link_timeout=4
+    loss_threshold=30
+    mtu=0
+    nem_id_start=1
+    ovs=0
+    platform_id_start=1
+    preservedir=0
+    sdturl=tcp://127.0.0.1:50000/
+}
+
